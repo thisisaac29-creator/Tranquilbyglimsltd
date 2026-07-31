@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 6.7%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 6.7%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 36 32% 64%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 54%;
+    --accent: 36 32% 64%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 36 32% 64%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-black text-white antialiased;
+    font-family: "Inter", system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(202, 100, 27, 0.3);
+    color: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 0.85;
+    text-transform: uppercase;
+  }
+}
+
+@layer components {
+  .font-mono-brand {
+    font-family: "JetBrains Mono", monospace;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .text-display-xxl {
+    font-size: clamp(72px, 12.5vw, 240px);
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+
+  .text-display-xl {
+    font-size: clamp(56px, 8.3vw, 160px);
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+
+  .text-display-l {
+    font-size: clamp(48px, 5.2vw, 100px);
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+
+  .text-body-large {
+    font-size: clamp(18px, 1.25vw, 24px);
+    line-height: 1.5;
+  }
+
+  .text-body {
+    font-size: clamp(14px, 0.83vw, 16px);
+    line-height: 1.5;
+  }
+
+  .text-caption {
+    font-size: clamp(11px, 0.625vw, 12px);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .text-mono-large {
+    font-family: "JetBrains Mono", monospace;
+    font-size: clamp(16px, 1.25vw, 24px);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .text-mono {
+    font-family: "JetBrains Mono", monospace;
+    font-size: clamp(10px, 0.625vw, 12px);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}
+
+/* ── Hero entrance animations ─────────────────────────────── */
+@keyframes heroTitleIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes heroLineGrow {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.hero-title-anim {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  animation: heroTitleIn 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+.hero-subtitle-anim {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  animation: heroFadeUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.75s both;
+}
+
+.hero-cta-anim {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  animation: heroFadeUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) 1.05s both;
+}
+
+.hero-line-anim {
+  will-change: transform, opacity;
+  animation: heroLineGrow 1.4s cubic-bezier(0.22, 1, 0.36, 1) 1.35s both;
+}
+
+
