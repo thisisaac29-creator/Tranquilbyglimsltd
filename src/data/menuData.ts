@@ -73,7 +73,7 @@ export const foodCategories: MenuCategory[] = [
     id: 'starters',
     name: 'Starters & Appetizers',
     type: 'food',
-    image: 'https://images.unsplash.com/photo-1541529086526-db283c563270?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/starters-appetizers.jpg',
     items: [
       {
         id: 'chicken-wing',
@@ -123,7 +123,7 @@ export const foodCategories: MenuCategory[] = [
     id: 'salads',
     name: 'Salads',
     type: 'food',
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/salads.jpg',
     items: [
       {
         id: 'seafood-salad',
@@ -155,7 +155,7 @@ export const foodCategories: MenuCategory[] = [
     id: 'platters',
     name: 'Platters',
     type: 'food',
-    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/platters.jpg',
     items: [
       { id: 'tranquil-4way', name: 'Tranquil 4-Way Platter', price: '₦35,000' },
       { id: 'tranquil-signature-platter', name: 'Tranquil Signature Platter', price: '₦40,000' },
@@ -248,7 +248,7 @@ export const foodCategories: MenuCategory[] = [
     id: 'native-soups',
     name: 'Native Soups',
     type: 'food',
-    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/egusi-soup.jpg',
     categoryNote: 'Served with choice of swallow',
     items: [
       {
@@ -299,7 +299,7 @@ export const foodCategories: MenuCategory[] = [
     id: 'swallow',
     name: 'Swallow',
     type: 'food',
-    image: 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/swallow-food.jpg',
     items: [
       { id: 'eba', name: 'Eba', price: '₦2,500' },
       { id: 'semo', name: 'Semovita (Semo)', price: '₦2,500' },
@@ -310,7 +310,7 @@ export const foodCategories: MenuCategory[] = [
     id: 'rice',
     name: 'Main Course — Rice',
     type: 'food',
-    image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/asian-rice.jpg',
     items: [
       {
         id: 'asian-special-rice',
@@ -360,7 +360,7 @@ export const foodCategories: MenuCategory[] = [
     id: 'pasta',
     name: 'Main Course — Pasta & Noodles',
     type: 'food',
-    image: 'https://images.unsplash.com/photo-1621996346565-e3d5d6281274?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/alfredo-pasta.jpg',
     items: [
       {
         id: 'alfredo-chicken',
@@ -404,7 +404,7 @@ export const foodCategories: MenuCategory[] = [
     id: 'grills',
     name: 'Grills',
     type: 'food',
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/grilled-meat.jpg',
     items: [
       {
         id: 'grilled-tiger-prawns',
@@ -442,7 +442,7 @@ export const foodCategories: MenuCategory[] = [
     id: 'burgers',
     name: 'Burgers & Sandwiches',
     type: 'food',
-    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/burgers-sandwiches.jpg',
     items: [
       {
         id: 'chicken-burger-crispy',
@@ -490,7 +490,7 @@ export const foodCategories: MenuCategory[] = [
     id: 'sides',
     name: 'Sides',
     type: 'food',
-    image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/sides.jpg',
     items: [
       { id: 'french-fries', name: 'French Fries', price: '₦2,500' },
       { id: 'yam-fries', name: 'Yam Fries', price: '₦2,500' },
@@ -506,7 +506,7 @@ export const foodCategories: MenuCategory[] = [
     id: 'dessert',
     name: 'Dessert',
     type: 'food',
-    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/dessert.jpg',
     items: [
       {
         id: 'flavour-custom-dessert',

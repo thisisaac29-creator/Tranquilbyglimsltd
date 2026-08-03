@@ -200,9 +200,6 @@ function CategorySection({ category }: { category: MenuCategory }) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 flex flex-col justify-end">
-            <span className="text-mono text-[#ca641b] text-[10px] tracking-[0.2em] mb-2 uppercase">
-              Category Showcase
-            </span>
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2">
               <h2 className="text-display-l text-white drop-shadow-md leading-none">
                 {category.name}
