@@ -525,8 +525,7 @@ export const drinkCategories: MenuCategory[] = [
     id: 'cocktails',
     name: 'Cocktails',
     type: 'drinks',
-    image: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1200&auto=format&fit=crop',
-    categoryNote: 'All prices exclusive of VAT',
+    image: '/assets/cocktails.jpg',
     items: [
       {
         id: 'tranquility-jar',
@@ -618,8 +617,7 @@ export const drinkCategories: MenuCategory[] = [
     id: 'mocktails',
     name: 'Mocktails',
     type: 'drinks',
-    image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=1200&auto=format&fit=crop',
-    categoryNote: 'All prices exclusive of VAT',
+    image: '/assets/mocktails.jpg',
     items: [
       {
         id: 'chapman',
@@ -676,7 +674,7 @@ export const drinkCategories: MenuCategory[] = [
     id: 'milkshakes',
     name: 'Milkshakes',
     type: 'drinks',
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=1200&auto=format&fit=crop',
+    image: '/assets/milkshake.jpg',
     items: [
       {
         id: 'milkshake-cookies',
@@ -697,8 +695,7 @@ export const drinkCategories: MenuCategory[] = [
     id: 'shots',
     name: 'Shots',
     type: 'drinks',
-    image: 'https://images.unsplash.com/photo-1560512823-829485b8bf24?q=80&w=1200&auto=format&fit=crop',
-    categoryNote: 'All prices exclusive of VAT',
+    image: '/assets/shots.jpg',
     items: [
       { id: 'tequila-shot', name: 'Tequila Shot', price: '₦4,500' },
       { id: 'tequila-6shots', name: 'Tequila (6 Shots)', price: '₦22,000' },
@@ -710,8 +707,8 @@ export const drinkCategories: MenuCategory[] = [
     id: 'whiskey',
     name: 'Whiskey',
     type: 'drinks',
-    image: 'https://images.unsplash.com/photo-1527281400683-1aae777175f8?q=80&w=1200&auto=format&fit=crop',
-    categoryNote: 'Bottle prices. All prices exclusive of VAT',
+    image: '/assets/whiskey.jpg',
+    categoryNote: 'Bottle prices.',
     items: [
       { id: 'glenfiddich-18', name: 'Glenfiddich (18 Years)', price: '₦280,000' },
       { id: 'glenfiddich-15', name: 'Glenfiddich (15 Years)', price: '₦170,000' },
@@ -728,8 +725,8 @@ export const drinkCategories: MenuCategory[] = [
     id: 'cognac',
     name: 'Cognac',
     type: 'drinks',
-    image: 'https://images.unsplash.com/photo-1569529465841-dfecdab7503b?q=80&w=1200&auto=format&fit=crop',
-    categoryNote: 'Bottle prices. All prices exclusive of VAT',
+    image: '/assets/cognac.avif',
+    categoryNote: 'Bottle prices.',
     items: [
       { id: 'hennessy-xo', name: 'Hennessy XO', price: '₦500,000' },
       { id: 'hennessy-vsop', name: 'Hennessy VSOP', price: '₦210,000' },
@@ -742,8 +739,8 @@ export const drinkCategories: MenuCategory[] = [
     id: 'tequila-bottles',
     name: 'Tequila',
     type: 'drinks',
-    image: 'https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?q=80&w=1200&auto=format&fit=crop',
-    categoryNote: 'Bottle prices. All prices exclusive of VAT',
+    image: '/assets/tequila.jpg',
+    categoryNote: 'Bottle prices.',
     items: [
       { id: 'don-julio', name: 'Don Julio', price: '₦290,000' },
       { id: 'casamigos', name: 'Casamigos', price: '₦280,000' },
@@ -756,8 +753,8 @@ export const drinkCategories: MenuCategory[] = [
     id: 'champagne',
     name: 'Champagne',
     type: 'drinks',
-    image: 'https://images.unsplash.com/photo-1594488507235-d0333b3723ee?q=80&w=1200&auto=format&fit=crop',
-    categoryNote: 'Bottle prices. All prices exclusive of VAT',
+    image: '/assets/champagne.jpg',
+    categoryNote: 'Bottle prices.',
     items: [
       { id: 'moet-rose', name: 'Moët Rosé', price: '₦210,000' },
       { id: 'moet-nectar', name: 'Moët Nectar Impérial', price: '₦230,000' },
@@ -769,8 +766,8 @@ export const drinkCategories: MenuCategory[] = [
     id: 'wine',
     name: 'Wine',
     type: 'drinks',
-    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1200&auto=format&fit=crop',
-    categoryNote: 'Bottle prices. All prices exclusive of VAT',
+    image: '/assets/wine.jpg',
+    categoryNote: 'Bottle prices.',
     items: [
       { id: 'carlo-rossi', name: 'Carlo Rossi', price: '₦28,000' },
       { id: 'baron', name: 'Baron', price: '₦25,000' },
@@ -784,8 +781,8 @@ export const drinkCategories: MenuCategory[] = [
     id: 'vodka',
     name: 'Vodka',
     type: 'drinks',
-    image: 'https://images.unsplash.com/photo-1608270586620-248524c67de9?q=80&w=1200&auto=format&fit=crop',
-    categoryNote: 'Bottle prices. Ground Floor only. All prices exclusive of VAT',
+    image: '/assets/vodka.jpg',
+    categoryNote: 'Bottle prices. Ground Floor only.',
     items: [
       { id: 'absolute-vodka', name: 'Absolute Vodka', priceGF: '₦38,500', note: 'Ground Floor only' },
       { id: 'bombay', name: 'Bombay', priceGF: '₦38,500', note: 'Ground Floor only' },
@@ -796,8 +793,8 @@ export const drinkCategories: MenuCategory[] = [
     id: 'liqueur',
     name: 'Liqueur',
     type: 'drinks',
-    image: 'https://images.unsplash.com/photo-1582106245687-cbb466a9f07f?q=80&w=1200&auto=format&fit=crop',
-    categoryNote: 'Bottle prices. All prices exclusive of VAT',
+    image: '/assets/campari.avif',
+    categoryNote: 'Bottle prices.',
     items: [
       { id: 'campari', name: 'Campari', price: '₦55,000' },
       { id: 'jagermeister', name: 'Jägermeister', price: '₦45,000' },
@@ -808,8 +805,7 @@ export const drinkCategories: MenuCategory[] = [
     id: 'mixers',
     name: 'Mixers & Energy Drinks',
     type: 'drinks',
-    image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=1200&auto=format&fit=crop',
-    categoryNote: 'All prices exclusive of VAT',
+    image: '/assets/monster-drink.jpg',
     items: [
       { id: 'cranberry', name: 'Cranberry', price: '₦13,500' },
       { id: 'red-bull', name: 'Red Bull', price: '₦4,000' },
@@ -822,8 +818,7 @@ export const drinkCategories: MenuCategory[] = [
     id: 'softs',
     name: 'Soft Drinks & Juices',
     type: 'drinks',
-    image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?q=80&w=1200&auto=format&fit=crop',
-    categoryNote: 'All prices exclusive of VAT',
+    image: '/assets/juice.jpg',
     items: [
       { id: 'active', name: 'Active', priceGF: '₦3,500', note: 'Ground Floor only' },
       { id: '5alive', name: '5Alive Pulpy', priceGF: '₦4,000', note: 'Ground Floor only' },
@@ -853,7 +848,7 @@ export const drinkCategories: MenuCategory[] = [
     name: 'Beer',
     type: 'drinks',
     image: 'https://images.unsplash.com/photo-1608270586620-248524c67de9?q=80&w=1200&auto=format&fit=crop',
-    categoryNote: 'Ground Floor only. All prices exclusive of VAT',
+    categoryNote: 'Ground Floor only.',
     items: [
       { id: 'heineken', name: 'Heineken', priceGF: '₦3,000', note: 'Ground Floor only' },
       { id: 'goldberg', name: 'Goldberg', priceGF: '₦2,500', note: 'Ground Floor only' },
@@ -872,8 +867,7 @@ export const drinkCategories: MenuCategory[] = [
     id: 'shisha',
     name: 'Shisha & Puff',
     type: 'drinks',
-    image: 'https://images.unsplash.com/photo-1541532713592-79a0317b6b77?q=80&w=1200&auto=format&fit=crop',
-    categoryNote: 'All prices exclusive of VAT',
+    image: '/assets/logistic-hookah.jpg',
     items: [
       {
         id: 'shisha-single',

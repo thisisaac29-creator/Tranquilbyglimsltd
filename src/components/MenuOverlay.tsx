@@ -7,6 +7,7 @@ interface MenuOverlayProps {
 }
 
 const navLinks = [
+  { label: "Home", href: "#top" },
   { label: "About", href: "#about" },
   { label: "Menu", href: "#menu" },
   { label: "Gallery", href: "#gallery" },
