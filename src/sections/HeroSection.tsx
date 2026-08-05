@@ -49,14 +49,19 @@ export default function HeroSection() {
     >
       {/* Background Video */}
       <div className="hero-bg absolute -inset-[15%] will-change-transform">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url(/assets/transquill/hero-poster.jpg)" }}
+        />
         <video
-          src="/assets/transquill/Transquil_hero_video.mp4"
+          src="/assets/transquill/Transquil_hero_video_web.mp4"
+          poster="/assets/transquill/hero-poster.jpg"
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover relative"
         />
       </div>
 

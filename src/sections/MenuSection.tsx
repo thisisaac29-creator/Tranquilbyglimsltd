@@ -1,10 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "react-router";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { createOrderUrl, type MenuItem } from "../data/menuData";
-
-gsap.registerPlugin(ScrollTrigger);
 
 interface HomepageMenuItem extends MenuItem {
   category: string;
@@ -18,7 +14,7 @@ const homepageMenuItems: HomepageMenuItem[] = [
     category: "Grills",
     price: "₦26,000",
     description: "King prawn, garlic, onion, chips",
-    image: "/assets/menu-1.jpg",
+    image: "/assets/Grilled-prawn.webp",
   },
   {
     id: "tranquility-jar",
@@ -114,58 +110,30 @@ export default function MenuSection() {
     const grid = gridRef.current;
     if (!section || !grid) return;
 
-    const ctx = gsap.context(() => {
-      // Title reveal
-      gsap.fromTo(
-        section.querySelectorAll(".menu-title"),
-        { y: 40, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1.2,
-          stagger: 0.1,
-          ease: "expo.out",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 75%",
-            once: true,
-          },
-        }
-      );
+    const titleEls = section.querySelectorAll(".menu-title");
+    const items = grid.querySelectorAll(".menu-item");
 
-      // Grid items stagger
-      const items = grid.querySelectorAll(".menu-item");
-      gsap.fromTo(
-        items,
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          stagger: 0.12,
-          ease: "expo.out",
-          scrollTrigger: {
-            trigger: grid,
-            start: "top 80%",
-            once: true,
-          },
-        }
-      );
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        titleEls.forEach((el, i) => {
+          const t = el as HTMLElement;
+          t.style.transitionDelay = `${i * 80}ms`;
+          t.classList.add("is-visible");
+        });
+        items.forEach((el, i) => {
+          const card = el as HTMLElement;
+          card.style.transitionDelay = `${i * 90}ms`;
+          card.classList.add("is-visible");
+        });
+        observer.disconnect();
+      },
+      { threshold: 0.15 }
+    );
 
-      // Parallax on grid
-      gsap.to(grid, {
-        yPercent: -4,
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 0.5,
-        },
-      });
-    }, section);
+    observer.observe(section);
 
-    return () => ctx.revert();
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -195,7 +163,7 @@ export default function MenuSection() {
         {/* Menu Grid */}
         <div
           ref={gridRef}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-6 will-change-transform"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-6"
         >
           {homepageMenuItems.map((item) => {
             const orderUrl = createOrderUrl(item);

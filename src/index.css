@@ -166,4 +166,21 @@
   animation: heroLineGrow 1.4s cubic-bezier(0.22, 1, 0.36, 1) 1.35s both;
 }
 
+/* ── Menu section slide-in ──────────────────────────────── */
+.menu-title,
+.menu-item {
+  opacity: 0;
+  transform: translate3d(0, 48px, 0);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.menu-title.is-visible,
+.menu-item.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
 
