@@ -31,7 +31,7 @@ const homepageMenuItems: HomepageMenuItem[] = [
     category: "Main Course",
     price: "₦15,000",
     description: "Basmati rice, grilled chicken breast, spring onion",
-    image: "/assets/menu-3.jpg",
+    image: "/assets/Tranquil-signature-rice.webp",
   },
   {
     id: "grilled-catfish",
@@ -39,7 +39,7 @@ const homepageMenuItems: HomepageMenuItem[] = [
     category: "Grills",
     price: "₦18,000",
     description: "BBQ catfish, pepper, chips",
-    image: "/assets/menu-4.jpg",
+    image: "/assets/Grilled-catfish.webp",
   },
 ];
 
