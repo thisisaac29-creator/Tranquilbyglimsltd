@@ -132,7 +132,13 @@ function MenuItemCard({ item, categoryLabel }: { item: MenuItem; categoryLabel: 
 }
 
 // ─── Category Section ─────────────────────────────────────────────────────────
-function CategorySection({ category }: { category: MenuCategory }) {
+function CategorySection({
+  category,
+  priority = false,
+}: {
+  category: MenuCategory;
+  priority?: boolean;
+}) {
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
@@ -201,7 +207,8 @@ function CategorySection({ category }: { category: MenuCategory }) {
               src={category.image}
               alt={category.name}
               className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-              loading="lazy"
+              loading={priority ? "eager" : "lazy"}
+              fetchPriority={priority ? "high" : "auto"}
               decoding="async"
             />
           </picture>
@@ -477,8 +484,12 @@ export default function FullMenuPage() {
 
       {/* ── Menu Content ──────────────────────────────────────────────────── */}
       <div className="max-w-[1680px] mx-auto px-6 md:px-12 pt-16 pb-24">
-        {currentCategories.map((category) => (
-          <CategorySection key={category.id} category={category} />
+        {currentCategories.map((category, i) => (
+          <CategorySection
+            key={category.id}
+            category={category}
+            priority={i === 0}
+          />
         ))}
       </div>
 
