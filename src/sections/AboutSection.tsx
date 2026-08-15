@@ -69,11 +69,19 @@ export default function AboutSection() {
               ref={img1Ref}
               className="absolute -inset-[15%] will-change-transform"
             >
-              <img
-                src="/assets/transquill/unnamed (2).jpg"
-                alt="Couple dining at sunset"
-                className="w-full h-full object-cover object-end"
-              />
+              <picture>
+                <source
+                  srcSet="/assets/transquill/unnamed (2).avif"
+                  type="image/avif"
+                />
+                <img
+                  src="/assets/transquill/unnamed (2).jpg"
+                  alt="Couple dining at sunset"
+                  className="w-full h-full object-cover object-end"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
             {/* Elegant overlay highlight */}
             <div className="absolute inset-0 border border-[#ca641b]/10 rounded-sm pointer-events-none z-10" />

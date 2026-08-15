@@ -129,11 +129,19 @@ export default function EventSection() {
           {/* Left: Flyer */}
           <div className="event-flyer opacity-0">
             <div className="relative aspect-[3/4] max-w-xl mx-auto lg:mx-0 overflow-hidden rounded-sm shadow-2xl bg-[#111111]">
-              <img
-                src="/assets/transquill/ileya_breeze_flyer.jpg"
-                alt="Ileya Breeze Event Flyer"
-                className="w-full h-full object-cover relative z-10"
-              />
+              <picture>
+                <source
+                  srcSet="/assets/transquill/ileya_breeze_flyer.avif"
+                  type="image/avif"
+                />
+                <img
+                  src="/assets/transquill/ileya_breeze_flyer.jpg"
+                  alt="Ileya Breeze Event Flyer"
+                  className="w-full h-full object-cover relative z-10"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
               <div className="absolute inset-0 border border-[#ca641b]/20 rounded-sm pointer-events-none z-20" />
             </div>
           </div>

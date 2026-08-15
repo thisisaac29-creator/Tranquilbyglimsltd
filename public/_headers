@@ -1,0 +1,6 @@
+# Caching headers for Netlify
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/transquill/*.mp4
+  Cache-Control: public, max-age=2592000

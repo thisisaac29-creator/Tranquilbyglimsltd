@@ -192,12 +192,19 @@ function CategorySection({ category }: { category: MenuCategory }) {
       {/* Category Showcase Banner Image & Heading */}
       <div ref={headingRef} className="mb-8">
         <div className="relative h-48 sm:h-60 md:h-72 w-full rounded-sm overflow-hidden mb-6 group border border-[#ca641b]/20 shadow-2xl bg-[#111111]">
-          <img
-            src={category.image}
-            alt={category.name}
-            className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-            loading="lazy"
-          />
+          <picture>
+            <source
+              srcSet={category.image.replace(/\.jpg$/, ".avif")}
+              type="image/avif"
+            />
+            <img
+              src={category.image}
+              alt={category.name}
+              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 flex flex-col justify-end">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2">

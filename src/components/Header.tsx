@@ -39,7 +39,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
         href="#top"
         className="flex items-center hover:opacity-80 transition-opacity duration-300"
       >
-        <img src="/assets/transquill/Tranquil_logo.png" alt="Tranquil Logo" className="h-12 w-auto object-contain mix-blend-lighten" />
+        <img src="/assets/transquill/Tranquil_logo.png" alt="Tranquil Logo" className="h-12 w-auto object-contain mix-blend-lighten" decoding="async" />
       </a>
 
       <button

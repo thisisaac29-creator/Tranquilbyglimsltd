@@ -59,11 +59,19 @@ export default function ReservationCTA() {
     >
       {/* Background Image */}
       <div className="cta-bg absolute -inset-[15%] will-change-transform">
-        <img
-          src="/assets/transquill/unnamed (17).jpg"
-          alt=""
-          className="w-full h-full object-cover"
-        />
+        <picture>
+          <source
+            srcSet="/assets/transquill/unnamed (17).avif"
+            type="image/avif"
+          />
+          <img
+            src="/assets/transquill/unnamed (17).jpg"
+            alt=""
+            className="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
         <div className="absolute inset-0 bg-black/70" />
       </div>
 

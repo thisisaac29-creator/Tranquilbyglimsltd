@@ -5,6 +5,7 @@ import { createOrderUrl, type MenuItem } from "../data/menuData";
 interface HomepageMenuItem extends MenuItem {
   category: string;
   image: string;
+  imageAvif?: string;
 }
 
 const homepageMenuItems: HomepageMenuItem[] = [
@@ -24,6 +25,7 @@ const homepageMenuItems: HomepageMenuItem[] = [
     priceLounge: "₦15,000",
     description: "Tequila, vodka, gin, triple sec & fruit juices",
     image: "/assets/menu-2.jpg",
+    imageAvif: "/assets/menu-2.avif",
   },
   {
     id: "signature-rice",
@@ -180,12 +182,26 @@ export default function MenuSection() {
               >
                 {/* Image Container */}
                 <div className="relative aspect-[4/3] sm:aspect-[3/4] overflow-hidden bg-[#1A1A1A]">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
-                    loading="lazy"
-                  />
+                  {item.imageAvif ? (
+                    <picture>
+                      <source srcSet={item.imageAvif} type="image/avif" />
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </picture>
+                  ) : (
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent" />
                   <span className="absolute top-4 left-4 text-mono text-[#ca641b] text-[10px] bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-sm border border-[#ca641b]/20">
                     {item.category}

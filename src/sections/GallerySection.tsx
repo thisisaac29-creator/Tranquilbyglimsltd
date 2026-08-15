@@ -127,12 +127,19 @@ export default function GallerySection() {
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
               ) : (
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    srcSet={item.src.replace(/\.jpg$/, ".avif")}
+                    type="image/avif"
+                  />
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               )}
             </div>
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 pointer-events-none" />
