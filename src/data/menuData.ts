@@ -1,9 +1,5 @@
-// ─────────────────────────────────────────────────────────────────────────────
 // Tranquil by Glims — Menu Data
-// Extracted from: Tranquil Food and Drinks Lounge.pdf
-//                 Tranquil Food and Drinks ground floor 2.pdf
-// All prices exclusive of VAT per the original PDFs.
-// ─────────────────────────────────────────────────────────────────────────────
+// All prices exclusive of VAT.
 
 export const WHATSAPP_NUMBER = '2348121558483';
 
