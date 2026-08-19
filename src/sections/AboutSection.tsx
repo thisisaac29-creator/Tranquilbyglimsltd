@@ -58,7 +58,7 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative py-[120px] md:py-[180px] px-6 md:px-12 overflow-hidden"
+      className="relative pt-[140px] pb-[100px]  px-6 md:px-12 overflow-hidden"
     >
       <div className="max-w-[1680px] mx-auto">
         {/* Two-column asymmetric layout */}

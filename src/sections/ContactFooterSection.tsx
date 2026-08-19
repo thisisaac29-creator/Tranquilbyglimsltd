@@ -36,7 +36,7 @@ export default function ContactFooterSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-[120px] md:py-[240px] px-6 md:px-12"
+      className="relative py-[120px] px-6 md:px-12"
     >
       <div className="max-w-[1680px] mx-auto">
         {/* Section Header */}
