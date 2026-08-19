@@ -41,13 +41,24 @@ export default function SmoothScrollProvider({ children }: { children: React.Rea
       lenisRef.current.scrollTo(0, { immediate: true });
     }
 
+    // Scroll to hash target after route change
+    if (location.hash) {
+      const timer = setTimeout(() => {
+        const target = document.querySelector(location.hash);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+
     // Refresh GSAP ScrollTrigger after route mount
     const timer = setTimeout(() => {
       ScrollTrigger.refresh();
     }, 50);
 
     return () => clearTimeout(timer);
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
 
   return <>{children}</>;
 }

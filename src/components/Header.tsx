@@ -47,7 +47,6 @@ export default function Header({ onMenuClick }: HeaderProps) {
         className="flex items-center gap-3 text-white hover:text-[#8A8A8A] transition-colors duration-300 group"
         data-hover
       >
-        <span className="text-sm uppercase tracking-[0.1em]">Menu</span>
         <div className="w-8 h-8 flex flex-col justify-center items-center gap-[6px]">
           <span className="block w-5 h-[1px] bg-current transition-transform duration-300 group-hover:translate-x-1" />
           <span className="block w-5 h-[1px] bg-current transition-transform duration-300 group-hover:-translate-x-1" />

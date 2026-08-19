@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useNavigate, useLocation } from "react-router";
 import { gsap } from "gsap";
 
 interface MenuOverlayProps {
@@ -7,11 +8,11 @@ interface MenuOverlayProps {
 }
 
 const navLinks = [
-  { label: "Home", href: "#top" },
-  { label: "About", href: "#about" },
-  { label: "Menu", href: "#menu" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Reserve", href: "#reserve" },
+  { label: "Home", path: "/", hash: "#top" },
+  { label: "About", path: "/", hash: "#about" },
+  { label: "Menu", path: "/", hash: "#menu" },
+  { label: "Gallery", path: "/", hash: "#gallery" },
+  { label: "Reserve", path: "/", hash: "#reserve" },
 ];
 
 export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
@@ -19,6 +20,8 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
   const linksRef = useRef<HTMLDivElement>(null);
   const tweensRef = useRef<gsap.core.Tween[]>([]);
   const hasOpenedRef = useRef(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const overlay = overlayRef.current;
@@ -80,12 +83,17 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
     };
   }, [isOpen]);
 
-  const handleLinkClick = (href: string) => {
+  const handleLinkClick = (path: string, hash: string) => {
     onClose();
+    const onHomePage = location.pathname === "/";
     setTimeout(() => {
-      const target = document.querySelector(href);
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
+      if (!onHomePage) {
+        navigate(path + hash);
+      } else {
+        const target = document.querySelector(hash);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
       }
     }, 800);
   };
@@ -101,7 +109,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
           {navLinks.map((link) => (
             <button
               key={link.label}
-              onClick={() => handleLinkClick(link.href)}
+              onClick={() => handleLinkClick(link.path, link.hash)}
               className="text-left text-white text-[clamp(36px,5vw,72px)] uppercase font-display leading-[0.9] tracking-[-0.04em] hover:text-[#ca641b] transition-colors duration-300 group overflow-hidden"
               data-hover
             >
