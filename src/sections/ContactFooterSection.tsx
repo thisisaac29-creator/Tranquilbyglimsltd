@@ -94,15 +94,11 @@ export default function ContactFooterSection() {
               <div className="space-y-2">
                 <div className="flex justify-between text-sm max-w-xs">
                   <span className="text-[#8A8A8A]">Monday &ndash; Thursday</span>
-                  <span className="text-white">10:00 AM &ndash; 11:00 PM</span>
+                  <span className="text-white">10:00 AM &ndash; 12:00 PM</span>
                 </div>
                 <div className="flex justify-between text-sm max-w-xs">
-                  <span className="text-[#8A8A8A]">Friday &ndash; Saturday</span>
-                  <span className="text-white">10:00 AM &ndash; 12:00 AM</span>
-                </div>
-                <div className="flex justify-between text-sm max-w-xs">
-                  <span className="text-[#8A8A8A]">Sunday</span>
-                  <span className="text-white">12:00 PM &ndash; 10:00 PM</span>
+                  <span className="text-[#8A8A8A]">Friday &ndash; Sunday</span>
+                  <span className="text-white">10:00 AM till dawn</span>
                 </div>
               </div>
             </div>

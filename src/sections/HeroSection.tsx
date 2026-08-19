@@ -95,7 +95,7 @@ export default function HeroSection() {
             className="inline-flex items-center justify-center px-10 py-4 border border-white/20 text-white text-xs uppercase tracking-[0.2em] hover:bg-white/5 hover:border-white/40 transition-all duration-300"
             data-hover
           >
-            View Menu
+            View Full Menu
           </Link>
         </div>
       </div>

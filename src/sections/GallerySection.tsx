@@ -99,7 +99,7 @@ export default function GallerySection() {
           <span className="gallery-title text-mono text-[#4A4A4A] block mb-4  opacity-0">
             03 &mdash; Gallery
           </span>
-          <h2 className="gallery-title text-display-xl text-white opacity-0">
+          <h2 className="gallery-title text-display-lg text-white opacity-0">
             Moments<br />Captured
           </h2>
         </div>
