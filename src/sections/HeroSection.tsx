@@ -66,8 +66,8 @@ export default function HeroSection() {
       </div>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/40 z-0" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/60 to-black z-0" />
+      <div className="absolute inset-0 bg-black/25 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/40 to-black/85 z-0" />
 
       {/* Content */}
       <div className="hero-content relative z-10 h-full flex flex-col justify-center items-center text-center px-6 will-change-transform">
